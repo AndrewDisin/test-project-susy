@@ -1,54 +1,54 @@
-header.header
-		.header__top
++b.HEADER.header
+		+e.top
 			.container
-				nav.header-nav
-					ul.header-nav__list
-						li.header-nav__item
-							a.header-nav__link(href="/") О компании
-						li.header-nav__item
-							a.header-nav__link(href="/") Каталог
-						li.header-nav__item
-							a.header-nav__link(href="/") Услуги
-						li.header-nav__item
-							a.header-nav__link(href="/") Лицензии
-						li.header-nav__item
-							a.header-nav__link(href="/") Доставка
-						li.header-nav__item
-							a.header-nav__link(href="/") Правила
-						li.header-nav__item
-							a.header-nav__link(href="/") Контакты
-				.header-search
-					form.header-search__form(id="header-search__form")
-						label.header-search__label(for="all-site-search")
-							input.header-search__input(type="search" name="all-site-search" id="all-site-search")
-							button.header-search__button(type="submit" name="header-search__button" id="header-search__button")
-				div.header-user
-					a.header-user__link(href="/") Вход
-				div.header-basket
-					a.header-basket__link(href="/") Моя корзаина
-		.header__bottom
+				+b.NAV.header-nav
+					+e.UL.list
+						+e.LI.item
+							+e.A.link(href="/") О компании
+						+e.LI.item
+							+e.A.link(href="/") Каталог
+						+e.LI.item
+							+e.A.link(href="/") Услуги
+						+e.LI.item
+							+e.A.link(href="/") Лицензии
+						+e.LI.item
+							+e.A.link(href="/") Доставка
+						+e.LI.item
+							+e.A.link(href="/") Правила
+						+e.LI.item
+							+e.A.link(href="/") Контакты
+				+b.header-search
+					+e.FORM.form(id="header-search__form")
+						+e.LABEL.label(for="all-site-search")
+							+e.INPUT.input(type="search" name="all-site-search" id="all-site-search")
+							+e.BUTTON.button(type="submit" name="header-search__button" id="header-search__button")
+				+b.header-user
+					+e.A.link(href="/") Вход
+				+b.header-basket
+					+e.A.link(href="/") Моя корзаина
+		+e.bottom
 			.container
-				.header-logo
-					a.header-logo__link(href="/")
-						img.header-logo__img(src="static/img/general/logo.png" alt="Logo")
-				.header__address
-					.header__place Россия, 440018, г. Пенза, ул. Средняя, 9
-					.header__work-time пн-пт 8:30- 8:00, сб 8:30-16:00, вс выходной
-					a.header__address-link(href="/") Как до нас добраться
-				.header__phone
-					.header__phone-item
-						a.header__phone-link(href="tel:+78412680211") +7 (8412) 68-02-11,
-						a.header__phone-link(href="tel:+78412684370") 68-43-70 
-						span.header__phone-description Магазин	
-					.header__phone-item
-						a.header__phone-link(href="tel:+78412683862") +7 (8412) 68-38-62 
-						span.header__phone-description Отдел заказов	
-					.header__phone-item
-						a.header__phone-link(href="tel:+7841268-02-11") +7 (8412) 68-02-11 
-						span.header__phone-description Ремонт и оборудование	
-				.header-hire
-					.header-hire__title Мы осуществляем прокат изделий:
-					.hire-item
-						img.hire-item__img(src="static/img/general/hire-item.png" alt="hire-item")
-						a.hire-item__title(href="/") Весы для новорожденных
-						a.hire-item__button(href="/") в прокат »
+				+b.header-logo
+					+e.A.link(href="/")
+						+e.IMG.img(src="static/img/general/logo.png" alt="Logo")
+				+e.address
+					+e.place Россия, 440018, г. Пенза, ул. Средняя, 9
+					+e.work-time пн-пт 8:30- 8:00, сб 8:30-16:00, вс выходной
+					+e.A.address-link(href="/") Как до нас добраться
+				+e.phone
+					+e.phone-item
+						+e.A.phone-link(href="tel:+78412680211") +7 (8412) 68-02-11,
+						+e.A.phone-link(href="tel:+78412684370") 68-43-70 
+						+e.SPAN.hphone-description Магазин	
+					+e.phone-item
+						+e.A.phone-link(href="tel:+78412683862") +7 (8412) 68-38-62 
+						+e.SPAN.phone-description Отдел заказов	
+					+e.phone-item
+						+e.A.phone-link(href="tel:+7841268-02-11") +7 (8412) 68-02-11 
+						+e.SPAN.phone-description Ремонт и оборудование	
+				+b.header-hire
+					+e.title Мы осуществляем прокат изделий:
+					+b.hire-item
+						+e.IMG.img(src="static/img/general/hire-item.png" alt="hire-item")
+						+e.A.title(href="/") Весы для новорожденных
+						+e.A.button(href="/") в прокат »
