@@ -6,14 +6,24 @@
 		top: 50px
 		left: 50%
 		transform: translateX(-50%)
-		max-width: 660px
-		padding: 55px 80px
-		background-color: $bgBlue
+		max-width: 500px
+		background-color: rgba($bgBlue,0.74)
 		font-family: $ligtFont
-		font-size: 34px
-		line-height: 44px
+		font-weight: 100;
+		font-size: 20px
+		line-height: 30px
 		text-align: center
 		color: white
+		padding: 30px 40px
+
+		@include breakpoint(1800px)
+			font-size: 34px
+			padding: 55px 80px
+			max-width: 660px
+			line-height: 40px
+
+
+
 
 .banner-slider
 	position: relative
@@ -24,6 +34,7 @@
 	.slick-arrow
 		display: none !important
 	.slick-dots
+		z-index: 10 
 		position: absolute
 		bottom: -20px
 		left: 50%
@@ -35,6 +46,9 @@
 			&:last-child
 				margin-right: 0
 			&.slick-active
+				button
+					background-color: $bgLightRed
+			&:hover
 				button
 					background-color: $bgLightRed
 		button

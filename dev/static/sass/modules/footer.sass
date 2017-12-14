@@ -1,0 +1,79 @@
+.footer
+	@include span(12);
+	padding: 25px 50px
+	background-color: $bgFooter
+	
+	&__top
+		@include span(12)
+		margin-bottom: 35px
+
+	&__bottom
+		@include span(12)
+
+	&__attention
+		@include span(6)
+		font-family: $mainFont
+		font-size: 12px
+		line-height: 16px
+		color: $fontAttention
+
+.madeby
+	@include span(6)
+	display: flex
+	justify-content: flex-end
+	align-items: center
+
+	&__descripton
+		font-family: $mainFont
+		font-size: 12px
+		line-height: 16px
+		color: $fontAttention
+		margin-right: 10px
+
+	&__img
+		max-width: 30px
+
+
+.footer-logo
+	@include span(2)
+	cursor: pointer
+
+	&__img
+		max-width: 195px
+
+
+.footer-search
+	@include span(4 last);
+	display: flex
+	justify-content: flex-end
+	
+	&__label
+		font-family: $mainFont
+		font-size: 10px
+		line-height: 20px
+		color: $originalGray
+		margin-right: 10px
+	
+	&__input
+		padding: 5px 10px
+		width: 100%
+		max-width: 210px
+		border: none
+		background-color: $fontLightGray
+		border-radius: 3px
+		margin-right: 10px
+		color: $fontBlack
+		font-family: $mainFont
+		font-size: 12px
+	&__button
+		cursor: pointer
+		background-color: $bgDarckGray
+		border: none
+		border-radius: 3px
+		padding: 7px 16px
+		font-family: $semiBoldFont
+		font-size: 9px
+		color: $originalGray
+		text-transform: uppercase
+
+

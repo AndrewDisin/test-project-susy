@@ -1,0 +1,173 @@
+.interestin-offers
+	@include span(12)
+	background-image: url("../img/general/interesting/bg_interesting_t.jpg")
+	padding: 50px 0 0 0
+	
+	.container
+		flex-direction: column
+	
+	&__title
+		font-family: $mainFont
+		font-size: 36px
+		line-height: 44px
+		color: $fontBlackTitle
+		margin-bottom: 20px
+
+	&__categories
+		display: flex
+		align-items: center
+		margin-bottom: 25px
+
+	&__category-item
+		margin-right: 50px
+		&:last-child
+			margin-right: 0
+
+	&__category-button
+		text-decoration: underline
+		font-family: $semiBoldFont
+		font-size: 14px
+		line-height: 22px
+		color: $fontBlue
+		cursor: pointer
+
+	&__list
+		@include span(12)
+		display: flex
+		flex-wrap: wrap
+
+
+.goods-item
+	@include span(3)
+	background-color: $white
+	padding: 10px 12px 40px 12px
+	max-width: 300px
+	margin: 0 15px 50px 15px
+	display: flex
+	flex-direction: column
+	align-items: center
+	-webkit-box-shadow: 2px 2px 9px 0px rgba(0, 0, 0, 0.09)
+	-moz-box-shadow:    2px 2px 9px 0px rgba(0, 0, 0, 0.09)
+	box-shadow:         2px 2px 9px 0px rgba(0, 0, 0, 0.09)
+
+	&_catalog
+		@include span(3 of 9)
+		outline: 1px solid $bgGrayLine
+		&:nth-child(3n)
+			margin-right: 0
+	
+	&__figure
+		position: relative
+		
+		&_new
+			
+			&:before
+				content: 'НОВИНКА'
+				position: absolute
+				top: 205px
+				left: -12px
+				transform: translateY(-100%)
+				text-transform: uppercase
+				background-color: $bgGreen
+				padding: 8px
+				font-family: $semiBoldFont
+				color: $white
+
+		&_best-price
+			
+			&:before
+				content: 'ЛУЧНАЯ ЦЕНА'
+				position: absolute
+				top: 205px
+				left: -12px
+				transform: translateY(-100%)
+				text-transform: uppercase
+				background-color: $bgOrange
+				padding: 8px
+				font-family: $semiBoldFont
+				color: $white
+	
+		&_bestseller
+			
+			&:before
+				content: 'Хит продаж'
+				position: absolute
+				top: 205px
+				left: -12px
+				transform: translateY(-100%)
+				text-transform: uppercase
+				background-color: $bgViolet
+				padding: 8px
+				font-family: $semiBoldFont
+				color: $white
+
+	&__img
+		width: 275px
+		height: 205px
+		margin-bottom: 15px
+	
+		&:hover
+			outline: 1px solid $bgGrayLine
+	
+	&__figcaption 
+		text-align: center
+		font-family: $mainFont
+		font-size: 12px
+		line-height: 20px
+		color: $fontFigureCaption
+		margin-bottom: 15px
+
+	&__title
+		font-family: $boldFont
+		font-size: 18px
+		line-height: 24px
+		color: $fontBlue
+		text-align: center
+		margin-bottom: 20px
+		max-width: 255px
+
+	&__description
+		font-family: $mainFont
+		font-size: 16px
+		line-height: 22px
+		color: $fontBlack
+		text-align: center
+		max-width: 265px
+		flex-grow: 1
+		margin-bottom: 25px
+
+	&__price
+		display: flex
+		flex-direction: column
+		align-items: center
+
+	&__cost
+		position: relative 
+		font-family: $semiBoldFont
+		font-size: 18px
+		line-height: 20px
+		color: $fontBlack
+		margin-bottom: 40px
+		
+		&_sale
+			margin-right: -60px
+			
+			&:before
+				position: absolute
+				content: "3 870 Р"
+				text-decoration: line-through
+				color: $fontOrange
+				top: 0
+				left: -15px
+				transform: translateX(-100%)
+				font-family: $semiBoldFont
+				font-size: 12px
+
+.button
+	&_goods-item
+		padding: 12px 20px
+		border-radius: 5px
+		background-color: $bgRed
+		color: $white
+
+
