@@ -7,12 +7,14 @@
 
 	&__title
 		@include span(12)
-		font-family: OpenSansLight, sans-serif
-		font-weight: 400
-		font-size: 36px
-		line-height: 24px
-		color: $black
 		margin-bottom: 30px
+		&_text-align-left
+			font-weight: 400
+			font-size: 36px
+			line-height: 24px
+			color: $black
+			text-align: left
+
 
 	&__content
 		@include span(12)
@@ -71,6 +73,16 @@
 			color: $lessBlue
 
 		&:first-child
+			&>.catalog-menu__item-link
+				background-color: $lessBlue
+				color: $white
+				text-transform: uppercase
+				font-family: OpenSansSemiBold, sans-serif
+				font-weight: 600
+				&:hover
+					background-color: $lessBlue
+					color: $white
+					cursor: default
 			&:before
 				display: none
 
@@ -90,17 +102,9 @@
 			background-color: $lightRed
 			cursor: pointer
 			color: $white
-
-		&_first
-			background-color: $lessBlue
-			color: $white
-			text-transform: uppercase
-			font-family: OpenSansSemiBold, sans-serif
-			font-weight: 600
-			&:hover
-				background-color: $lessBlue
-				color: $white
-				cursor: default			
+        //
+		//&_first
+		//
 	
 .right-content
 	@include span(9 of 12)
@@ -114,7 +118,7 @@
 	display: flex
 	flex-wrap: wrap
 
-.options
+.catalog-options
 	@include span(12)
 	padding: 0 0 15px 15px
 	font-family: $mainFont

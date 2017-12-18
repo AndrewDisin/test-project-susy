@@ -1,0 +1,126 @@
+{
+  "content": {
+    "title": "Каталог"
+  },
+  "catalogMenyList":{
+    "item1": {
+      "title": "Каталог",
+      "link": "/"
+    },
+    "item2": {
+      "title": "Массажные столы Vernam",
+      "link": "/"
+    },
+    "item3": {
+      "title": "Товары для дома",
+      "link": "/"
+    },
+    "item4": {
+      "title": "Для здоровья и красоты",
+      "link": "/"
+    },
+    "item5": {
+      "title": "Мебель медицинская",
+      "link": "/"
+    },
+    "item6": {
+      "title": "Изделия медицинского назначения",
+      "link": "/"
+    },
+    "item7": {
+      "title": "Стерилизация, дезинфекция",
+      "link": "/"
+    },
+    "item8": {
+      "title": "Урология, гинекология",
+      "link": "/"
+    },
+    "item9": {
+      "title": "Хирургия",
+      "link": "/"
+    },
+    "item10": {
+      "title": "Офтальмология",
+      "link": "/"
+    },
+    "item11": {
+      "title": "Стоматология",
+      "link": "/"
+    },
+    "item12": {
+      "title": "Диагностика",
+      "link": "/"
+    },
+    "item13": {
+      "title": "Лабораторное оборудование и инструменты",
+      "link": "/"
+    },
+    "item14": {
+      "title": "Травматология",
+      "link": "/"
+    },
+    "item15": {
+      "title": "Рентгеновское оборудование",
+      "link": "/"
+    },
+    "item16": {
+      "title": "Утилизация",
+      "link": "/"
+    },
+    "item17": {
+      "title": "Косметология и дерматология",
+      "link": "/"
+    }
+  },
+  "catalogOptions": {
+    "option1": {
+      "show": "Показано товаров: 2010"
+    }
+  },
+  "catalogList": {
+    "item1": {
+      "src": "assets/img/general/interesting/item1.jpg",
+      "alt": "Item1",
+      "figcaption": "Физиотерапевтические аппараты",
+      "title": "Электроды для дарсонвализации",
+      "description": "Для аппарато «Короона», «Карат», «Ультратек»",
+      "cost": "1 500 Р",
+      "btn": "купить »",
+      "mod": "figure_new",
+      "sale": ""
+    },
+    "item2": {
+      "src": "assets/img/general/interesting/item2.jpg",
+      "alt": "Item2",
+      "figcaption": "Тонометры Автоматические",
+      "description": "Для пенсионеров скидки!!!",
+      "title": "Тонометр автоматический с функцией диагностики аритмии Microlife BP A100",
+      "cost": "3 870 Р",
+      "btn": "купить »",
+      "mod": "figure_best-price",
+      "sale": "goods-item__cost_sale"
+    },
+    "item3": {
+      "src": "assets/img/general/interesting/item3.jpg",
+      "alt": "Item3",
+      "figcaption": "Физиотерапевтические аппараты",
+      "title": "Концентратор кислородный 7F-1L",
+      "description": "Для сеансов профилактической кислородотерапии, приготовления кислородных коктейлей",
+      "cost": "1 500 Р",
+      "btn": "купить »",
+      "mod": "figure_new",
+      "sale": ""
+    },
+    "item4": {
+      "src": "assets/img/general/interesting/item2.jpg",
+      "alt": "Item4",
+      "figcaption": "Тонометры Автоматические",
+      "title": "Тонометр автоматический с функцией диагностики аритмии Microlife BP A100",
+      "description": "ДАННЫЙ ТОВАР ИМЕЕТ РЕГИСТРАЦИОННОЕ УДОСТОВЕРЕНИЕ!",
+      "cost": "цена не указана",
+      "btn": "купить »",
+      "mod": "figure_bestseller",
+      "sale": ""
+    }
+  }
+}
