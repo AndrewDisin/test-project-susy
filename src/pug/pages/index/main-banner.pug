@@ -1,0 +1,7 @@
++b.SECTION.main-banner
+	+b.banner-slider
+		each object in content.bannerSlider
+			+e.item
+				+e.IMG.item-img(src= object['src'] alt=object['alt'])
+	each object in content.mainBanner
+		+e.H1.title= object['title']

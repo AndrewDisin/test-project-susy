@@ -1,6 +1,6 @@
 module.exports = function () {
     $.gulp.task('sass:build', () => {
-        return $.gulp.src('./dev/static/sass/main.sass')
+        return $.gulp.src(['./src/assets/sass/main.sass', './src/assets/sass/libs.sass'])
             .pipe($.gp.sass({
                 // 'include css': true
             }))
@@ -9,11 +9,11 @@ module.exports = function () {
             }))
             .pipe($.gp.csscomb())
             .pipe($.gp.csso())
-            .pipe($.gulp.dest('./build/static/css/'))
+            .pipe($.gulp.dest('./build/assets/css/'))
     });
 
-    $.gulp.task('sass:dev', () => {
-        return $.gulp.src('./dev/static/sass/main.sass')
+    $.gulp.task('sass:src', () => {
+        return $.gulp.src(['./src/assets/sass/main.sass', './src/assets/sass/libs.sass'])
             .pipe($.gp.sourcemaps.init())
             .pipe($.gp.sass({
                 // 'include css': true
@@ -28,7 +28,7 @@ module.exports = function () {
             .pipe($.gp.autoprefixer({
                 browsers: ['last 10 version']
             }))
-            .pipe($.gulp.dest('./build/static/css/'))
+            .pipe($.gulp.dest('./build/assets/css/'))
             .pipe($.browserSync.reload({
                 stream: true
             }));

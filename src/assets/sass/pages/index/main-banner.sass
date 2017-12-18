@@ -1,0 +1,56 @@
+.main-banner
+	@include span(12)
+	position: relative
+	&__title
+		position: absolute
+		top: 50px
+		left: 50%
+		transform: translateX(-50%)
+		max-width: 500px
+		background-color: rgba($lightBlue,0.74)
+		padding: 30px 40px
+
+		@include breakpoint(1800px)
+			font-size: 34px
+			padding: 55px 80px
+			max-width: 660px
+			line-height: 40px
+
+
+
+
+.banner-slider
+	position: relative
+	&__item
+		@include span(12)
+	&__item-img
+		width: 100%
+	.slick-arrow
+		display: none !important
+	.slick-dots
+		z-index: 10 
+		position: absolute
+		bottom: -20px
+		left: 50%
+		transform: translateX(-50%)
+		display: flex !important
+		li
+			cursor: pointer
+			margin-right: 24px
+			&:last-child
+				margin-right: 0
+			&.slick-active
+				button
+					background-color: $red
+			&:hover
+				button
+					background-color: $red
+		button
+			font-size: 0
+			background-color: $lowBlue
+			border: none
+			border-radius: 50%
+			width: 10px
+			height: 10px
+
+

@@ -14,9 +14,9 @@ $.path.task.forEach(function(taskPath) {
 });
 
 
-$.gulp.task('dev', $.gulp.series(
+$.gulp.task('src', $.gulp.series(
     'clean',
-    $.gulp.parallel('sass:dev', 'pug', 'libsJS:dev', 'js:copy', 'svg', 'img:dev', 'fonts')));
+    $.gulp.parallel('sass:src', 'pug', 'libsJS:src', 'js:copy', 'svg', 'img:src', 'fonts')));
 
 $.gulp.task('build', $.gulp.series(
     'clean',
@@ -24,7 +24,7 @@ $.gulp.task('build', $.gulp.series(
 
 
 $.gulp.task('default', $.gulp.series(
-    'dev',
+    'src',
     $.gulp.parallel(
         'watch',
         'serve'

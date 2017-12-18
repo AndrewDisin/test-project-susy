@@ -1,0 +1,18 @@
++b.SECTION.interestin-offers
+	.container
+		+e.H2.title Интересные предложения:
+		+e.UL.categories
+			each object in content.categories
+				+e.LI.category-item
+					+e.A.category-button(href= object['link'])= object['title']
+		+e.list
+			each object in content.goodsList
+				+b.ARTICLE.goods-item
+					+e.FIGURE(class= object['mod'])
+						+e.IMG.img(src=object['src'] alt=object['alt'])
+						+e.FIGCAPTION.figcaption= object['figcaption']
+					+e.title= object['title']
+					+e.description= object['description']
+					+e.price
+						+e.cost(class= object['sale'])= object['cost']
+						+b.button_goods-item= object['btn']

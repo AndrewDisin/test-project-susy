@@ -1,0 +1,16 @@
++b.SECTION.range
+	.container
+		each object in content.range
+			+e.H3.title= object['title']
+			+e.list
+				each object in content.rangeList
+					+b.ARTICLE.catalog-item
+						+e.IMG.img(src= object['src'] alt=object['alt'])
+						+e.info
+							+e.A.title(href="/")= object['title']
+							+e.UL.categories
+								each object1 in object.links
+									+b.LI.category-item
+										+e.A.link(href=object1['link'])=object1['title']
+			+b.A.button_blue(href="/")= object['btn']
+			+e.descriptin= object['descriptin']
