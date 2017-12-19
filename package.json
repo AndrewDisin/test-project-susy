@@ -38,6 +38,7 @@
     "gulp-tinypng": "^1.0.2",
     "gulp-uglifyjs": "^0.6.2",
     "postcss-pxtorem": "^4.0.1",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "smart-grid": "^2.0.1"
   }
 }
