@@ -1,22 +1,25 @@
 module.exports = function () {
+    var postcss = require('gulp-postcss');
+    var autoprefixer = require('autoprefixer');
+    var mqpacker = require('css-mqpacker');
+    var pxtorem = require('postcss-pxtorem');
+
     $.gulp.task('sass:build', () => {
+        var processors = [ pxtorem({replace: false}), mqpacker({sort: true }), autoprefixer({browsers: ['last 10 version']}) ];
         return $.gulp.src(['./src/assets/sass/main.sass', './src/assets/sass/libs.sass'])
             .pipe($.gp.sass({
-                // 'include css': true
-            }))
-            .pipe($.gp.autoprefixer({
-                browsers: ['last 10 version']
             }))
             .pipe($.gp.csscomb())
             .pipe($.gp.csso())
+            .pipe(postcss(processors))
             .pipe($.gulp.dest('./build/assets/css/'))
     });
 
     $.gulp.task('sass:src', () => {
+        var processors = [ pxtorem({replace: false}), mqpacker({sort: true }), autoprefixer({browsers: ['last 10 version']}) ];
         return $.gulp.src(['./src/assets/sass/main.sass', './src/assets/sass/libs.sass'])
             .pipe($.gp.sourcemaps.init())
             .pipe($.gp.sass({
-                // 'include css': true
             }))
             .on('error', $.gp.notify.onError(function (error) {
                 return {
@@ -25,9 +28,7 @@ module.exports = function () {
                 };
             }))
             .pipe($.gp.sourcemaps.write())
-            .pipe($.gp.autoprefixer({
-                browsers: ['last 10 version']
-            }))
+            .pipe(postcss(processors))
             .pipe($.gulp.dest('./build/assets/css/'))
             .pipe($.browserSync.reload({
                 stream: true
