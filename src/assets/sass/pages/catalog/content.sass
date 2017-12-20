@@ -1,13 +1,13 @@
 .catalog
 	padding: 0 0 60px 0
 	width: 100%
-	
+
 	.container
 		@include wrapper()
-		//flex-direction: column
 
 	&__title
 		@include size(12)
+
 		margin-bottom: 30px
 		&_text-align-left
 			font-weight: 400
@@ -19,11 +19,13 @@
 
 	&__content
 		@include row-flex()
+
 		align-items: flex-start
 
 
 .bread-crumbs
 	@include size(12)
+
 	display: flex
 	flex-wrap: wrap
 	align-items: center
@@ -48,9 +50,28 @@
 			&:before
 				display: none
 
+.catalog-button
+	position: fixed
+	top: 0
+	right: 0
+	width: 50px
+	height: 50px
+	background-color: $lessBlue
+	cursor: pointer
+
 .catalog-menu
 	@include col()
 	@include size-ofset(3)
+	@include md-block()
+		position: fixed
+		top: 0
+		right: -17px
+		transform: translateX(100%)
+		width: 320px
+		height: 100vh
+		overflow: auto
+		z-index: 30
+
 	background-color: $skyBlue
 	outline: 1px solid $blue
 
@@ -59,6 +80,8 @@
 		@include size(12)
 
 		&:before
+			@include md(display, none)
+
 			position: absolute
 			content: ">"
 			top: 20px
@@ -66,6 +89,7 @@
 			font-size: 16px
 			line-height: 20px
 			color: $lessBlue
+
 
 		&:first-child
 			&>.catalog-menu__item-link
@@ -99,6 +123,7 @@
 .right-content
 	@include col()
 	@include size-ofset(9)
+	@include size-md-ofset(12)
 
 .catalog-list
 	@include row-flex()
@@ -106,6 +131,7 @@
 
 .catalog-options
 	@include row-flex()
+
 	padding: 0 0 15px 15px
 	font-size: 12px
 	line-height: 24px

@@ -1,45 +1,59 @@
 .main-banner
 	width: 100%
 	position: relative
+
 	&__title
-		position: absolute
-		top: 20px
-		left: 50%
-		transform: translateX(-50%)
-		background-color: rgba($lightBlue,0.74)
-		font-size: 20px
-		padding: 25px 40px
-		max-width: 90%
-		line-height: 20px
-
-		@include breakpoint($xxl)
-			top: 50px
-			font-size: 34px
-			padding: 55px 80px
-			max-width: 660px
-			line-height: 40px
-
-		@include breakpoint($md)
+		@include xxl-block()
 			top: 40px
 			font-size: 28px
 			padding: 25px 40px
 			max-width: 90%
 			line-height: 30px
 
+		@include md-block()
+			top: 20px
+			font-size: 18px
+			padding: 25px 40px
+			max-width: 90%
+			line-height: 20px
 
+		@include xs-block()
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			font-size: 28px
+			padding: 25px 40px
+			max-width: 90%
+			line-height: 30px
 
-
+		position: absolute
+		background-color: rgba($lightBlue,0.74)
+		top: 50px
+		left: 50%
+		font-size: 34px
+		padding: 55px 80px
+		max-width: 660px
+		line-height: 40px
+		transform: translateX(-50%)
 
 .banner-slider
 	position: relative
+
 	&__item
 		width: 100%
 		min-height: 200px
+
 	&__item-img
+		@include xs-block()
+			width: auto
+			height: 250px
+
 		width: 100%
 		min-height: 200px
+
 	.slick-arrow
 		display: none !important
+
 	.slick-dots
 		z-index: 10 
 		position: absolute

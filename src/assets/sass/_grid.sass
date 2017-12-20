@@ -1,6 +1,6 @@
 $columns: 12
 
-$break_xxl: 1400px
+$break_xxl: 1440px
 $break_lg: 1200px
 $break_md: 992px
 $break_sm: 768px
@@ -79,7 +79,7 @@ $fields_sm: 15px
 
 @mixin size-lg($n)
     $val: 100% / $columns * $n
-    +lg(width, #{calc(#{$val} - #{$offset_lg})})
+    +lg(width, #{calc(#{$val})})
 
 @mixin size-lg-ofset($n)
     $val: 100% / $columns * $n
@@ -89,7 +89,7 @@ $fields_sm: 15px
 
 @mixin size-md($n)
     $val: 100% / $columns * $n
-    +md(width, #{calc(#{$val} - #{$offset_md})})
+    +md(width, #{calc(#{$val})})
 
 @mixin size-md-ofset($n)
     $val: 100% / $columns * $n
@@ -99,7 +99,7 @@ $fields_sm: 15px
 
 @mixin size-sm($n)
     $val: 100% / $columns * $n
-    +sm(width, #{calc(#{$val} - #{$offset_sm})})
+    +sm(width, #{calc(#{$val})})
 
 @mixin size-sm-ofset($n)
     $val: 100% / $columns * $n
@@ -109,7 +109,7 @@ $fields_sm: 15px
 
 @mixin size-xs($n)
     $val: 100% / $columns * $n
-    +xs(width, #{calc(#{$val} - #{$offset_xs})})
+    +xs(width, #{calc(#{$val})})
 
 @mixin size-xs-ofset($n)
     $val: 100% / $columns * $n
@@ -324,5 +324,3 @@ $fields_sm: 15px
 @mixin from-to($min_width, $max_width)
     @media screen and (min-width: $min_width) and (max-width: $max_width)
         @content
-
-    

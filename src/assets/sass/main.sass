@@ -4,11 +4,12 @@
 @import 'helpers/normalize'
 @import 'helpers/grid'
 @import 'helpers/vars'
-@import "smart-grid"
+@import "grid"
 
 html
 	font-size: 16px
 	font-family: $mainFont
+	@include sm(font-size, 12px)
 
 
 ul,li

@@ -3,9 +3,10 @@ module.exports = function () {
     var autoprefixer = require('autoprefixer');
     var mqpacker = require('css-mqpacker');
     var pxtorem = require('postcss-pxtorem');
+    var sortCSSmq = require('sort-css-media-queries');
 
     $.gulp.task('sass:build', () => {
-        var processors = [ pxtorem({replace: false}), mqpacker({sort: true }), autoprefixer({browsers: ['last 10 version']}) ];
+        var processors = [ pxtorem({replace: false}), mqpacker({sort: sortCSSmq.desktopFirst}), autoprefixer({browsers: ['last 10 version']}) ];
         return $.gulp.src(['./src/assets/sass/main.sass', './src/assets/sass/libs.sass'])
             .pipe($.gp.sass({
             }))
@@ -16,7 +17,7 @@ module.exports = function () {
     });
 
     $.gulp.task('sass:src', () => {
-        var processors = [ pxtorem({replace: false}), mqpacker({sort: true }), autoprefixer({browsers: ['last 10 version']}) ];
+        var processors = [ pxtorem({replace: false}), mqpacker({sort: sortCSSmq.desktopFirst}), autoprefixer({browsers: ['last 10 version']}) ];
         return $.gulp.src(['./src/assets/sass/main.sass', './src/assets/sass/libs.sass'])
             .pipe($.gp.sourcemaps.init())
             .pipe($.gp.sass({

@@ -5,4 +5,8 @@ $(document).ready(function () {
         dots: true,
    });
 
+    $('.menu-button').click(function() {
+        $( ".mobile-menu" ).fadeToggle( "slow", "linear" );
+    });
+
 });
