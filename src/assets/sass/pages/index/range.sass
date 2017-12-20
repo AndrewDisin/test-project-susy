@@ -1,37 +1,41 @@
 .range
 	padding: 60px 0 45px 0
-	@include span(12)
+	width: 100%
+
 	.container
-		flex-direction: column
+		@include wrapper()
 	
 	&__title
-		margin-bottom: 50px
+		margin: 0 auto 50px
 	
 	&__list
-		@include wrapper()
 		@include row-flex()
-		display: flex
-		flex-wrap: wrap
 
 	&__descriptin
+		width: 100%
+		text-align: center
 		font-size: 14px
 		line-height: 20px
 		color: $gray
 
+
 .catalog-item
 	@include col()
-	@include col-offsets(30px)
-	@include size(3)
-	@include size-lg(4)
-	margin-bottom: 30px
+	@include size-ofset(3)
+	@include size-lg-ofset(6)
+	@include size-sm-ofset(12)
 
+	margin-bottom: 30px
 	display: flex
 	align-items: flex-start
+	justify-content: center
+
 	&__img
 		width: auto
-		max-width: 80px
-		min-width: 75px
+		max-width: 70px
+		min-width: 70px
 		margin-right: 30px
+
 	&__title
 		display: block
 		font-family: OpenSansBold, sans-serif
@@ -40,21 +44,28 @@
 		color: $blue
 		cursor: pointer
 		margin-bottom: 35px
+		max-width: 205px
+
 		&:hover
 			color: $red
+
 	&__categories
 		padding-left: 15px
+
 
 .category-item
 	position: relative
 	font-size: 17px
 	line-height: 24px
 	margin-bottom: 20px
+
 	&__link
+
 		&:hover
 			cursor: pointer
 			color: $darkBlue
 			text-decoration: underline
+
 	&:before
 		position: absolute
 		content: ">"
@@ -67,8 +78,9 @@
 		line-height: 24px
 		color: $darkBlue
 
+
 .gray-line
-	@include span(12)
+	@include size(12)
 	margin: 30px 0
 	height: 1px
 	background-color: $darkWhite
@@ -83,7 +95,7 @@
 		text-transform: uppercase
 		color: $white
 		background-color: $lessBlue
-		margin-bottom: 20px
+		margin: 0 auto 20px
 
 
 

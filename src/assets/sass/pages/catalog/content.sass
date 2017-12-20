@@ -1,12 +1,13 @@
 .catalog
 	padding: 0 0 60px 0
-	@include span(12)
+	width: 100%
 	
 	.container
-		flex-direction: column
+		@include wrapper()
+		//flex-direction: column
 
 	&__title
-		@include span(12)
+		@include size(12)
 		margin-bottom: 30px
 		&_text-align-left
 			font-weight: 400
@@ -17,13 +18,12 @@
 
 
 	&__content
-		@include span(12)
-		display: flex
+		@include row-flex()
 		align-items: flex-start
 
 
 .bread-crumbs
-	@include span(12)
+	@include size(12)
 	display: flex
 	flex-wrap: wrap
 	align-items: center
@@ -49,16 +49,14 @@
 				display: none
 
 .catalog-menu
-	// box-sizing: content-box
-	@include span(2.85 of 12)
-	// max-width: 290px
+	@include col()
+	@include size-ofset(3)
 	background-color: $skyBlue
-	margin-right: span(0.15)
 	outline: 1px solid $blue
 
 	&__item
 		position: relative
-		@include span(3 of 3)
+		@include size(12)
 
 		&:before
 			position: absolute
@@ -87,7 +85,7 @@
 				color: $white
 
 	&__item-link
-		@include span(3 of 3)
+		display: block
 		padding: 20px 40px 20px 20px
 		font-size: 15px
 		line-height: 22px
@@ -99,20 +97,19 @@
 			color: $white
 	
 .right-content
-	@include span(9 of 12)
-	display: flex
-	flex-direction: column
-	align-items: center
-
+	@include col()
+	@include size-ofset(9)
 
 .catalog-list
-	@include span(12 of 12)
-	display: flex
-	flex-wrap: wrap
+	@include row-flex()
+
 
 .catalog-options
-	@include span(12)
+	@include row-flex()
 	padding: 0 0 15px 15px
 	font-size: 12px
 	line-height: 24px
 	color: $gray
+	&__show
+		@include col()
+		@include size(6)
