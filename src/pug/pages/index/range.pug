@@ -1,8 +1,8 @@
 +b.SECTION.range
-	.container
+	.container.wrapper
 		each object in content.range
 			+e.H3.title= object['title']
-			+e.list
+			+e.list.row-flex
 				each object in content.rangeList
 					+b.ARTICLE.catalog-item
 						+e.IMG.img(src= object['src'] alt=object['alt'])

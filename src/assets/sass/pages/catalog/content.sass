@@ -3,10 +3,9 @@
 	width: 100%
 
 	.container
-		@include wrapper()
 
 	&__title
-		@include size(12)
+		width: 100%
 
 		margin-bottom: 30px
 		&_text-align-left
@@ -18,37 +17,36 @@
 
 
 	&__content
-		@include row-flex()
 
 		align-items: flex-start
 
 
 .bread-crumbs
-	@include size(12)
+  width: 100%
 
-	display: flex
-	flex-wrap: wrap
-	align-items: center
-	margin-bottom: 30px
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  margin-bottom: 30px
 
-	&__link
-		position: relative
-		padding: 10px 0
-		font-size: 12px
-		color: $black
-		margin-right: 18px
-		&:before
-			position: absolute
-			content: "/"
-			top: 50%
-			right: -11px
-			transform: translateY(-50%)
-			font-size: 12px
-			color: $lessBlue
-		&:last-child
-			color: $lightGray
-			&:before
-				display: none
+  &__link
+      position: relative
+      padding: 10px 0
+      font-size: 12px
+      color: $black
+      margin-right: 18px
+      &:before
+          position: absolute
+          content: "/"
+          top: 50%
+          right: -11px
+          transform: translateY(-50%)
+          font-size: 12px
+          color: $lessBlue
+      &:last-child
+          color: $lightGray
+          &:before
+              display: none
 
 .catalog-button
 	position: fixed
@@ -60,9 +58,7 @@
 	cursor: pointer
 
 .catalog-menu
-	@include col()
-	@include size-ofset(3)
-	@include md-block()
+	@media screen and (max-width: $break_md)
 		position: fixed
 		top: 0
 		right: -17px
@@ -72,15 +68,18 @@
 		overflow: auto
 		z-index: 30
 
+	@include size(3)
+
 	background-color: $skyBlue
 	outline: 1px solid $blue
 
 	&__item
 		position: relative
-		@include size(12)
+		@include size(12, 0px)
 
 		&:before
-			@include md(display, none)
+			@media screen and (max-width: $break_md)
+				display: none
 
 			position: absolute
 			content: ">"
@@ -121,21 +120,16 @@
 			color: $white
 	
 .right-content
-	@include col()
-	@include size-ofset(9)
-	@include size-md-ofset(12)
+	@media screen and (max-width: $break_md)
+		@include size(12)
 
-.catalog-list
-	@include row-flex()
-
+	@include size(9)
 
 .catalog-options
-	@include row-flex()
 
 	padding: 0 0 15px 15px
 	font-size: 12px
 	line-height: 24px
 	color: $gray
 	&__show
-		@include col()
-		@include size(6)
+		@include size(6, 0px)

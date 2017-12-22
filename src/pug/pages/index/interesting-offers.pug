@@ -1,11 +1,11 @@
 +b.SECTION.interestin-offers
-	.container
+	.container.wrapper
 		+e.H2.title Интересные предложения:
 		+e.UL.categories
 			each object in content.categories
 				+e.LI.category-item
 					+e.A.category-button(href= object['link'])= object['title']
-		+e.list
+		+e.list.row-flex
 			each object in content.goodsList
 				+b.ARTICLE.goods-item
 					+e.FIGURE(class= object['mod'])

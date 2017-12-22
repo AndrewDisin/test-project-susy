@@ -1,6 +1,6 @@
 +b.FOOTER.footer
-	.container
-		+e.top
+	.container.wrapper
+		+e.top.row-flex
 			+b.A.footer-logo(href="/")
 				+e.IMG.img(src="../../assets/img/general/footer-logo.jpg", alt="Footer logo")
 			+b.footer-address
@@ -18,7 +18,7 @@
 				+e.LABEL.label(for="footer-search-input") Поиск по сайту
 				+e.INPUT.input(type="serch" name="footer-search-input" id="footer-search-input")
 				+e.BUTTON.button(type="submit" name="footer-search-button" id="footer-search-button") Найти
-		+e.bottom
+		+e.bottom.row-flex
 			+e.attention ОБРАЩАЕМ ВАШЕ ВНИМАНИЕ, что данный интернет-сайт и материалы, размещенные на нем, носят исключительно информационный характер и ни при каких условиях не являются публичной офертой, определяемой положениями статьи 437 Гражданского кодекса РФ.
 			+b.A.madeby(href="/")
 				+e.SPAN.descripton Разработка сайта

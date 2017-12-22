@@ -1,43 +1,51 @@
 .footer
-	@include lg(padding, 20px 0)
+	@media screen and (max-width: $break_lg)
+		padding: 20px 0
 
 	width: 100%
 	padding: 25px 50px
 	background-color: $lessBlack
 	
 	&__top
-		@include row-flex()
 
 		width: 100%
 		align-items: flex-start
 		margin-bottom: 35px
 
 	&__bottom
-		@include row-flex()
-		@include xs(width, auto)
+		@media screen and (max-width: $break_xs)
+			width: auto
 
 		width: 100%
 
 
 	&__attention
-		@include col()
-		@include size-ofset(6)
-		@include size-lg-ofset(8)
-		@include size-xs-ofset(12)
-		@include xs-block()
+		@media screen and (max-width: $break_xs)
 			text-align: center
 			margin-bottom: 20px
+
+		@media screen and (max-width: $break_lg)
+			@include size(8)
+
+		@media screen and (max-width: $break_xs)
+			@include size(12)
+
+		@include size(6)
+
 
 		font-size: 12px
 		line-height: 16px
 		color: $lowLightGray
 
 .madeby
-	@include col()
-	@include size(6)
-	@include size-lg(4)
-	@include size-xs(12)
-	@include xs(justify-content, center)
+	@media screen and (max-width: $break_lg)
+		@include size(4, 0px)
+
+	@media screen and (max-width: $break_xs)
+		@include size(12, 0px)
+		justify-content: center
+
+	@include size(6, 0px)
 
 	display: flex
 	justify-content: flex-end
@@ -54,10 +62,14 @@
 
 
 .footer-logo
-	@include col()
-	@include size-ofset(2)
-	@include size-lg-ofset(4)
-	@include size-md-ofset(6)
+	@media screen and (max-width: $break_lg)
+		@include size(4)
+
+	@media screen and (max-width: $break_md)
+		@include size(6)
+
+	@include size(2)
+
 	cursor: pointer
 
 	&__img
@@ -65,10 +77,12 @@
 		width: 100%
 
 .footer-address
-	@include col()
-	@include size-ofset(3)
-	@include size-lg-ofset(4)
-	@include md(display, none)
+	@media screen and (max-width: $break_lg)
+		@include size(4)
+	@media screen and (max-width: $break_md)
+		display: none
+
+	@include size(3)
 
 	&__place
 		font-family: $mainFont
@@ -87,14 +101,17 @@
 
 
 .footer-phone
-	@include  size-ofset(3)
-	@include size-lg-ofset(4)
-	@include size-md-ofset(6)
+	@media screen and (max-width: $break_lg)
+		@include size(4)
+	@media screen and (max-width: $break_md)
+		@include size(6)
+
+	@include  size(3)
 
 	&__phone-item
 		margin-bottom: 6px
-
-		@include lg(text-align, right)
+		@media screen and (max-width: $break_lg)
+			text-align: right
 
 		&:last-child
 			margin-bottom: 0
@@ -106,9 +123,10 @@
 
 
 .footer-search
-	@include col()
-	@include size-ofset(4)
-	@include lg(display, none)
+	@media screen and (max-width: $break_lg)
+		display: none
+
+	@include size(4)
 
 	display: flex
 	justify-content: flex-end

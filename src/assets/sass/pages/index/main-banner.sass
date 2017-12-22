@@ -3,21 +3,20 @@
 	position: relative
 
 	&__title
-		@include xxl-block()
+		@media screen and (max-width: $break_xxl)
 			top: 40px
 			font-size: 28px
 			padding: 25px 40px
 			max-width: 90%
 			line-height: 30px
-
-		@include md-block()
+		@media screen and (max-width: $break_md)
 			top: 20px
 			font-size: 18px
 			padding: 25px 40px
 			max-width: 90%
 			line-height: 20px
 
-		@include xs-block()
+		@media screen and (max-width: $break_xs)
 			top: 50%
 			left: 50%
 			transform: translate(-50%, -50%)
@@ -44,7 +43,7 @@
 		min-height: 200px
 
 	&__item-img
-		@include xs-block()
+		@media screen and (max-width: $break_xs)
 			width: auto
 			height: 250px
 

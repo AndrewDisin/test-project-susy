@@ -1,16 +1,13 @@
-@import "../../../bower_components/susy/sass/susy"
-@import "../../../bower_components/breakpoint-sass/stylesheets/breakpoint"
-
 @import 'helpers/normalize'
-@import 'helpers/grid'
 @import 'helpers/vars'
-@import "grid"
+@import "helpers/grid"
 
 html
+	@media screen and (max-width: $break_sm)
+		font-size: 12px
+
 	font-size: 16px
 	font-family: $mainFont
-	@include sm(font-size, 12px)
-
 
 ul,li
 	margin: 0
@@ -80,7 +77,7 @@ figure
 
 // ПРОЧЕЕ
 // Стили медиазапросов
-@import 'media'
+//@import 'media'
 
 // Стили типографики
 @import 'helpers/typography'

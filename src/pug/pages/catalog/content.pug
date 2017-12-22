@@ -1,22 +1,22 @@
 +b.SECTION.catalog
 	+b.catalog-button <--
 		+e.IMG.img(src="")
-	.container
+	.container.wrapper
 		+b.bread-crumbs
 			+e.A.link(href="/") Главная
 			+e.A.link Каталог
 		+e.H1.title_text-align-left Каталог
-		+e.content
+		+e.content.row-flex
 			+b.catalog-menu
 				+e.UL.list
 					each object in catalog.catalogMenyList
 						+e.LI.item
 							+e.A(href= object['link']).item-link= object['title']
 			+b.right-content
-				+b.catalog-options
+				+b.catalog-options.row-flex
 					each object in catalog.catalogOptions
 						+e.show= object['show']
-				+b.catalog-list
+				+b.catalog-list.row-flex
 					each object in catalog.catalogList
 						+b.ARTICLE.goods-item_catalog
 							+e.FIGURE(class= object['mod'])

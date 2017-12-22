@@ -4,8 +4,6 @@
 	padding: 50px 0 20px 0
 	
 	.container
-
-		@include wrapper()
 	
 	&__title
 		@include size(12)
@@ -19,7 +17,8 @@
 		align-items: center
 
 	&__category-item
-		@include xs(margin-right, 15px)
+		@media screen and (max-width: $break_xs)
+			margin-right: 15px
 
 		margin-right: 50px
 
@@ -35,14 +34,15 @@
 		cursor: pointer
 
 	&__list
-		@include row-flex()
 
 
 .goods-item
-	@include col()
-	@include size-ofset(3)
-	@include size-lg-ofset(6)
-	@include size-xs-ofset(12)
+	@media screen and (max-width: $break_xs)
+		@include size(12)
+	@media screen and (max-width: $break_lg)
+		@include size(6)
+
+	@include size(3)
 
 	background-color: $white
 	padding: 10px 12px 40px 12px
@@ -55,11 +55,12 @@
 	box-shadow:         2px 2px 9px 0px rgba(0, 0, 0, 0.09)
 
 	&_catalog
+		@media screen and (max-width: $break_sm)
+			@include size(6)
+		@media screen and (max-width: $break_md)
+			@include size(4)
 
-		@include col()
-		@include size-ofset(4)
-		@include size-md-ofset(4)
-		@include size-sm-ofset(6)
+		@include size(4)
 
 		outline: 1px solid $darkWhite
 		&:nth-child(3n)

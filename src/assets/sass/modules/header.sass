@@ -6,7 +6,8 @@
     background-color: $lessWhite
 
     .container
-      @include lg(padding, 0)
+      @media screen and (max-width: $break_lg)
+        padding: 0
 
   &__bottom
     width: 100%
@@ -16,9 +17,12 @@
       align-items: flex-start
   
 .phone
-  @include  size-ofset(3)
-  @include size-lg-ofset(4)
-  @include sm(display, none)
+  @media screen and (max-width: $break_sm)
+    display: none
+  @media screen and (max-width: $break_lg)
+    @include size(4)
+
+  @include  size(3)
 
   &__phone-item
     margin-bottom: 6px
@@ -26,13 +30,15 @@
       margin-bottom: 0
   
   &__phone-link
+    @media screen and (max-width: $break_xxl)
+      font-size: 12px
+
     font-family: $mainFont
     font-size: 14px
     color: $black
-    @include xxl(font-size, 12px)
 
     &_footer
-      @include size(3)
+      @include size(3, 0)
       color: $originalGray
   
   &__phone-description
@@ -41,43 +47,47 @@
     font-size: 14px
 
 .address
-    @include col()
-    @include size-ofset(3)
-    @include lg(display, none)
+  @media screen and (max-width: $break_lg)
+    display: none
 
-    &__place
-      font-family: $mainFont
-      font-size: 14px
-      color: $black
-      margin-bottom: 9px
-      @include xxl(font-size, 12px)
+  @include size(3)
+
+  &__place
+    font-family: $mainFont
+    font-size: 14px
+    color: $black
+    margin-bottom: 9px
+    @media screen and (max-width: $break_xxl)
+      font-size: 12px
 
 
-    &__work-time
-      font-family: $mainFont
-      font-size: 14px
-      color: $black
-      margin-bottom: 9px
-      @include xxl(font-size, 12px)
+  &__work-time
+    font-family: $mainFont
+    font-size: 14px
+    color: $black
+    margin-bottom: 9px
+    @media screen and (max-width: $break_xxl)
+      font-size: 12px
 
-      &:last-child
-        margin-bottom: 0
+    &:last-child
+      margin-bottom: 0
 
-    &__address-link
-      font-family: OpenSansSemiBold, sans-serif
-      font-size: 14px
-      color: $blue
-      @include xxl(font-size, 12px)
+  &__address-link
+    font-family: OpenSansSemiBold, sans-serif
+    font-size: 14px
+    color: $blue
+    @media screen and (max-width: $break_xxl)
+      font-size: 12px
 
 
 .container
-  @include wrapper()
   display: flex
   flex-wrap: wrap
   align-items: center
 
 .menu-button
-  @include lg(display, block)
+  @media screen and (max-width: $break_lg)
+    display: block
 
   display: none
   padding: 5px 20px
@@ -110,21 +120,26 @@
     font-weight: 600
 
 .header-nav
-  @include col()
-  @include size(7)
-  @include size-lg(1)
-  @include lg(margin-right, auto)
-  @include size-sm(4)
-  @include sm(margin-right, 0)
+  @media screen and (max-width: $break_md)
+    margin-right: 0
+    @include size(4, 0px)
+  @media screen and (max-width: $break_lg)
+    @include size(1, 0px)
+    margin-right: auto
+
+  @include size(7, 0px)
+
 
   position: relative
 
 
   &__list
+    @media screen and (max-width: $break_lg)
+      display: none
+
     display: flex
     list-style: none
     justify-content: space-between
-    @include lg(display, none)
 
 
   &__item
@@ -153,22 +168,29 @@
 
 
 .header-search
-  @include col()
-  @include size-ofset(2)
-  @include size-lg-ofset(3)
-  @include sm(display, none)
+  @media screen and (max-width: $break_md)
+    display: none
+  @media screen and (max-width: $break_lg)
+    @include size(3)
+
+  @include size(2)
+
 
   &__label
+    @media screen and (max-width: $break_lg)
+      display: flex
+
     position: relative
-    @include lg(display, flex)
 
 
   &__input
+    @media screen and (max-width: $break_lg)
+      width: 100%
+
     border-radius: 20px
     border: 1px solid #e6e6e6
     padding: 9px 10px 9px 34px
     font-size: 12px
-    @include lg(width, 100%)
 
 
   &__button
@@ -190,12 +212,17 @@
       background: url('../img/general/header_sprit.png') -52px -10px
 
 .header-user
-  @include col()
-  @include size(1)
-  @include size-md(2)
-  @include size-sm(4)
-  
+  @media screen and (max-width: $break_sm)
+    @include size(4, 0px)
+  @media screen and (max-width: $break_md)
+    @include size(4, 0px)
+
+  @include size(1, 0px)
+
   &__link
+    @media screen and (max-width: $break_sm)
+      font-size: 12px
+
     position: relative
     display: block
     width: 100%
@@ -207,7 +234,7 @@
     font-family: OpenSansSemiBold, sans-serif
     font-size: 14px
     color: $darkBlack
-    @include lg(font-size, 12px)
+
     &:before
       content: ""
       position: absolute
@@ -219,14 +246,23 @@
       background: url('../img/general/header_sprit.png') -10px -51px
 
 .header-basket
-  @include col()
-  @include size(2)
-  @include size-lg(3)
-  @include size-md(4)
-  @include size-sm(4)
+  @media screen and (max-width: $break_sm)
+    @include size(4, 0px)
+  @media screen and (max-width: $break_md)
+    @include size(4, 0px)
+  @media screen and (max-width: $break_lg)
+    @include size(4, 0px)
+
+  @include size(2, 0px)
 
 
   &__link
+    @media screen and (max-width: $break_xs)
+      color: transparent
+    @media screen and (max-width: $break_lg)
+      font-size: 12px
+
+
     position: relative
     display: block
     width: 100%
@@ -238,10 +274,12 @@
     color: $white
     background-color: $lightRed
     text-decoration: none
-    @include lg(font-size, 12px)
-    @include xs(color, transparent)
 
     &:before
+      @media screen and (max-width: $break_xs)
+        left: 50%
+        transform: translate(-50%, -50%)
+
       content: ''
       position: absolute
       left: 7%
@@ -250,18 +288,17 @@
       width: 22px
       height: 21px
       background: url('../img/general/header_sprit.png') -10px -10px
-      @include xs-block()
-        left: 50%
-        transform: translate(-50%, -50%)
-
 
 
 .header-logo
-  @include col()
-  @include size-ofset(3)
-  @include size-lg-ofset(4)
-  @include size-sm-ofset(6)
-  @include size-xs-ofset(12)
+  @media screen and (max-width: $break_xs)
+    @include size(12)
+  @media screen and (max-width: $break_sm)
+    @include size(6)
+  @media screen and (max-width: $break_lg)
+    @include size(4)
+
+  @include size(3)
 
 
   &__link
@@ -272,11 +309,15 @@
 
 
 .header-hire
-  @include col()
-  @include size-ofset(3)
-  @include size-lg-ofset(4)
-  @include size-sm-ofset(6)
-  @include xs(display, none)
+  @media screen and (max-width: $break_xs)
+    display: none
+  @media screen and (max-width: $break_sm)
+    @include size(6)
+  @media screen and (max-width: $break_lg)
+    @include size(4)
+
+  @include size(3)
+
 
   &__title
     margin-bottom: 13px
@@ -312,7 +353,8 @@
       line-height: 14px
   
   &__button
-    @include xxl(font-size, 10px)
+    @media screen and (max-width: $break_xxl)
+      font-size: 10px
     width: 100%
     max-width: 108px
     background-color: $lightRed
