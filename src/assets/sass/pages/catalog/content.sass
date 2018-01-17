@@ -6,8 +6,8 @@
 
 	&__title
 		width: 100%
-
 		margin-bottom: 30px
+
 		&_text-align-left
 			font-weight: 400
 			font-size: 36px
@@ -17,8 +17,8 @@
 
 
 	&__content
-
 		align-items: flex-start
+		margin-bottom: 160px
 
 
 .bread-crumbs
@@ -49,20 +49,45 @@
               display: none
 
 .catalog-button
+	display: none
 	position: fixed
-	top: 0
-	right: 0
+	bottom: 0
+	left: 0
 	width: 50px
 	height: 50px
 	background-color: $lessBlue
+	background-image: url('../img/general/login.png')
+	background-position: center center
+	background-repeat: no-repeat
+	z-index: 30
+
 	cursor: pointer
+	@media screen and (max-width: $break_md)
+		display: block
+
+.close-catalog-menu
+  display: none
+  position: absolute
+  top: 0
+  right: 20px
+  margin: 10px
+  background-image: url("../img/general/close-button.png")
+  background-size: cover
+  background-repeat: no-repeat
+  width: 20px
+  height: 20px
+  z-index: 30
+  cursor: pointer
+  @media screen and (max-width: $break_md)
+    display: block
 
 .catalog-menu
+	position: relative
 	@media screen and (max-width: $break_md)
 		position: fixed
 		top: 0
-		right: -17px
-		transform: translateX(100%)
+		left: -17px
+		transform: translateX(-100%)
 		width: 320px
 		height: 100vh
 		overflow: auto
@@ -99,7 +124,7 @@
 				&:hover
 					background-color: $lessBlue
 					color: $white
-					cursor: default
+					cursor: pointer
 			&:before
 				display: none
 
@@ -118,18 +143,128 @@
 			background-color: $lightRed
 			cursor: pointer
 			color: $white
-	
+
+
 .right-content
 	@media screen and (max-width: $break_md)
 		@include size(12)
 
 	@include size(9)
 
-.catalog-options
 
-	padding: 0 0 15px 15px
+.catalog-options
+	width: 100%
+	padding: 0 0 15px 0
 	font-size: 12px
 	line-height: 24px
 	color: $gray
-	&__show
-		@include size(6, 0px)
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+
+.catalog-sorting
+	position: relative
+	background-color: $lessWhite
+	padding: 18px 21px 14px 21px
+	display: flex
+	box-shadow: 1.286px 1.532px 14px 0px rgba(42, 88, 123, 0.33);
+	&__description
+		margin-right: 15px
+		font-size: 12px
+	&__criterion
+		position: relative
+		font-size: 14px
+		font-family: OpenSansBold, sans-serif
+		color: $blue
+		padding-right: 15px
+		&:before
+			content: '>'
+			position: absolute
+			top: 50%
+			right: 10px
+			transform: translateY(-70%) rotate(-90deg)
+			width: 10px
+			height: 10px
+
+.catalog-sorting-menu
+	display: none
+	position: absolute
+	top: 100%
+	left: 0
+	background-color: $white
+	z-index: 30
+	width: 100%
+	box-shadow: 1.286px 1.532px 14px 0 rgba(42, 88, 123, 0.33)
+	&__link
+		display: block
+		width: 100%
+		padding: 15px 40px
+		text-align: right
+		cursor: pointer
+		font-size: 12px
+		&:hover
+			background-color: $red
+			color: $white
+
+.catalog-pagination
+	display: flex
+	justify-content: center
+	align-items: center
+	@media screen and (max-width: $break_sm)
+		flex-wrap: wrap
+
+.button
+	&_big
+		width: 100%
+		max-width: 150px
+		font-size: 14px
+		padding: 10px 40px 10px 30px
+		border-radius: 5px
+		margin-bottom: 0
+		@media screen and (max-width: $break_sm)
+			max-width: 100%
+	&_small
+		background-color: $whiteBlue
+		border: 1px solid $lessBlue
+		width: 100%
+		max-width: 40px
+		font-size: 14px
+		padding: 10px
+		border-radius: 5px
+		margin-left: 5px
+		margin-right: 5px
+		margin-bottom: 0
+		color: $lessBlack
+	&_active
+		background-color: $lessBlue
+		border: 1px solid $lessBlue
+		color: $white
+	&_first
+		margin-right: 35px
+		@media screen and (max-width: $break_sm)
+			margin-right: 0
+			margin-bottom: 20px
+	&_last
+		margin-left: 35px
+		@media screen and (max-width: $break_sm)
+			margin-left: 0
+			margin-top: 20px
+
+.ellipsis
+	margin: 0 25px
+	@media screen and (max-width: $break_xs)
+		margin: 10px
+		width: 100%
+		text-align: center
+
+.catalog-about
+	&__title
+		width: 100%
+		text-align: center
+		margin-bottom: 20px
+	&__description
+		text-align: center
+		margin: 0 auto
+		max-width: 97%
+

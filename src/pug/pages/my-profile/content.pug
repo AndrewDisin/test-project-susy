@@ -1,0 +1,85 @@
++b.SECTION.my-profile
+    .container.wrapper
+        +b.bread-crumbs
+            +e.A.link(href="/") Главная
+            +e.A.link Мой профиль
+        .row-flex
+            +e.H1.title Мой профиль
+            +b.FORM.form
+                +e.date
+                    +b.logout Выйти
+                    +b.user-data
+                        +e.avatar
+                            +e.IMG.img(src="assets/img/general/user-avatar.png")
+                        +e.user-email username@mail.ru
+                        +b.BUTTON.button_blue._large Выбрать фото
+                    +b.date-registration
+                        +e.title ДАННЫЕ РЕГИСТРАЦИИ
+                        +e.item
+                            +e.LABEL.label_email._required Ваш E-mail
+                            +e.INPUT.input_email(type="email" name="input-email" id="input-email")
+                        +e.item
+                            +e.LABEL.label_password._required Пароль
+                            +e.INPUT.input_password(type="password" name="input-password" id="input-password")
+                        +e.item
+                            +e.LABEL.label_confirm-password._required  Подтвердите пароль
+                            +e.INPUT.input_confirm-password(type="password" name="input-confirm-password" id="input-confirm-password")
+                    +b.date-company
+                        +e.title ДАННЫЕ ОБ ОРГАНИЗАЦИИ
+                        +e.item
+                            +e.LABEL.label_name._required Наименование организации
+                            +e.INPUT.input_name(type="text" name="input-company-name" id="input-company-name")
+                        +e.item
+                            +e.LABEL.label_contact-person._required ФИО контактного лица
+                            +e.INPUT.input_contact-person(type="text" name="input-contact-person" id="input-contact-person")
+                        +e.item
+                            +e.LABEL.label_inn._required ИНН
+                            +e.INPUT.input_inn(type="text" name="input-company-inn" id="input-company-inn")
+                        +e.item
+                            +e.LABEL.label_contact-phone Контактный телефон
+                            +e.INPUT.input_contact-phone(type="tel" name="input-contact-phone" id="input-contact-phone")
+                        +e.item
+                            +e.LABEL.label_director._required ФИО руководителя
+                            +e.INPUT.input_director(type="text" name="input-company-director" id="input-company-director")
+                    +b.company-legal-address
+                        +e.title ЮРИДИЧЕСКИЙ АДРЕС ОРГАНИЗАЦИИ
+                        +e.item
+                            +e.LABEL.label_country._required Страна
+                            +e.INPUT.input_country(type="text" name="input-country" id="input-country")
+                        +e.item._little
+                            +e.LABEL.label_house._required._little Дом
+                            +e.INPUT.input_house(type="text" name="input-house" id="input-house")
+                        +e.item._little
+                            +e.LABEL.label_housing._little Корпус
+                            +e.INPUT.input_housing(type="text" name="input-housing" id="input-housing")
+                        +e.item._little
+                            +e.LABEL.label_office._required._little Квартира/офис
+                            +e.INPUT.input_office(type="text" name="input-office" id="input-office")
+                        +e.item
+                            +e.LABEL.label_city._required Город
+                            +e.INPUT.input_city(type="text" name="input-city" id="input-city")
+                        +e.item
+                            +e.LABEL.label_company-phone Телефон ораганизации
+                            +e.INPUT.input_conpany-phone(type="tel" name="input-conpany-phone" id="input-conpany-phone")
+                        +e.item
+                            +e.LABEL.label_street._required Улица
+                            +e.INPUT.input_street(type="text" name="input-street" id="input-street")
+                    +b.bank-details
+                        +e.title БАНКОВСКИЕ РЕКВИЗИТЫ
+                        +e.item
+                            +e.LABEL.label_bank._required Банк
+                            +e.INPUT.input_bank(type="text" name="input-bank" id="input-bank")
+                        +e.item
+                            +e.LABEL.label_contact-rs._required Р/с
+                            +e.INPUT.input_contact-rs(type="text" name="input-rs" id="input-rs")
+                        +e.item
+                            +e.LABEL.label_ks._required К/с
+                            +e.INPUT.input_ks(type="text" name="input-ks" id="input-ks")
+                        +e.item
+                            +e.LABEL.label_contact-bik БИК
+                            +e.INPUT.input_contact-bik(type="text" name="input-bik" id="input-bik")
+                        +e.item
+                            +e.LABEL.label_kpp КПП
+                            +e.INPUT.input_kpp(type="text" name="input-kpp" id="input-kpp")
+                +e.options
+                    +b.BUTTON.button_red._large(type="submit" name="registration-submit" id="registration-submit") Сохранить изменения »

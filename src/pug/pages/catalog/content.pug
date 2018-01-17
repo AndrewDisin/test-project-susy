@@ -1,5 +1,5 @@
 +b.SECTION.catalog
-	+b.catalog-button <--
+	+b.catalog-button
 		+e.IMG.img(src="")
 	.container.wrapper
 		+b.bread-crumbs
@@ -8,22 +8,52 @@
 		+e.H1.title_text-align-left Каталог
 		+e.content.row-flex
 			+b.catalog-menu
+				+b.close-catalog-menu
 				+e.UL.list
 					each object in catalog.catalogMenyList
 						+e.LI.item
 							+e.A(href= object['link']).item-link= object['title']
 			+b.right-content
-				+b.catalog-options.row-flex
+				+b.catalog-options
 					each object in catalog.catalogOptions
 						+e.show= object['show']
+					+b.catalog-sorting
+						+e.description Сортировать по:
+						+e.criterion наименованию
+						+b.UL.catalog-sorting-menu
+							+e.LI.item
+								+e.A.link(htef="/") популярности
+							+e.LI.item
+								+e.A.link(htef="/") алфавиту
+							+e.LI.item
+								+e.A.link(htef="/") новинки
+							+e.LI.item
+								+e.A.link(htef="/") лучшая цена
+							+e.LI.item
+								+e.A.link(htef="/") хит продаж
 				+b.catalog-list.row-flex
 					each object in catalog.catalogList
 						+b.ARTICLE.goods-item_catalog
 							+e.FIGURE(class= object['mod'])
 								+e.IMG.img(src= object['src'] alt= object['alt'])
 								+e.FIGCAPTION.figcaption= object['figcaption']
-							+e.title= object['title']
+							+e.A.title(href="card.html")= object['title']
 							+e.description= object['description']
 							+e.price
 								+e.cost(class= object['sale'])= object['cost']
 								+b.button_goods-item= object['btn']
+				+b.catalog-pagination
+					+b.A.button_blue._big._first(href="/") Назад
+					+b.A.button_blue._small._active(href="/") 1
+					+b.A.button_blue._small(href="/") 2
+					+b.A.button_blue._small(href="/") 3
+					+b.A.button_blue._small(href="/") 4
+					+b.ellipsis ...
+					+b.A.button_blue._small(href="/") 14
+					+b.A.button_blue._small(href="/") 15
+					+b.A.button_blue._small(href="/") 16
+					+b.A.button_blue._small(href="/") 17
+					+b.A.button_blue._big._last(href="/") Вперед
+		+b.catalog-about
+			+e.H2.title Медицинская техника в Пензе и Пензенской области
+			+e.description ЗАО «Медтехника» осуществляет свою деятельность с 1965 года. В течение четырех десятилетий мы обеспечиваем бесперебойное функционирование и обновление парка медицинской техники в лечебно-профилактических учреждениях города и области. В настоящее время ЗАО «Медтехника» представляет собой современное предприятие, обеспечивающее лечебно-профилактические учреждения медицинской техникой, расходными материалами, предоставляющее полный спектр услуг, обеспечивающих бесперебойную и безопасную эксплуатацию медицинской техники. Высококвалифицированные специалисты, технологическое и инструментальное оснащение производства, развитая инфраструктура – все это позволяет выполнять работы на высоком техническом уровне. ЗАО «Медтехника» оказывает услуги населению г. Пензы и Пензенской области, участвует в национальном проекте «Здоровье» и программах модернизации здравоохранения.

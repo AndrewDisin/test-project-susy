@@ -11,7 +11,7 @@
 					+e.FIGURE(class= object['mod'])
 						+e.IMG.img(src=object['src'] alt=object['alt'])
 						+e.FIGCAPTION.figcaption= object['figcaption']
-					+e.title= object['title']
+					+e.A.title(href="card.html")= object['title']
 					+e.description= object['description']
 					+e.price
 						+e.cost(class= object['sale'])= object['cost']

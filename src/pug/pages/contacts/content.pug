@@ -1,0 +1,50 @@
++b.SECTION.contacts
+    .container.wrapper
+        +b.bread-crumbs
+            +e.A.link(href="/") Главная
+            +e.A.link Контакты
+        .row-flex
+            each object in contacts.title
+                +e.H1.title= object['title']
+            each object in contacts.description
+                +e.description= object['description']
+            +b.left-content
+                +e.map
+                    +b.IFRAME.contacts-iframe(src="https://yandex.by/map-widget/v1/-/CBa-AWB3gC" frameborder="0")
+                +e.address-info
+                    +e.info-item
+                        each object in contacts.addressInfo
+                            +e.address-title= object['adresstitle']
+                            +e.address-place= object['adressplace']
+                    +e.info-item
+                        each object in contacts.workTime
+                            +e.worck-time-title= object['workTimeTitle']
+                        +b.UL.work-time-list
+                            each object in contacts.workTimeList
+                                +b.LI.work-time-item_holliday
+                                    +e.days= object['days']
+                                    +e.time= object['time']
+                +e.how-to-reach
+                    +e.info-item
+                        each object in contacts.reach
+                            +e.address-title_orange= object['title']
+                        +b.UL.reach-list
+                            each object in contacts.reachList
+                                +b.LI.reach-item
+                                    +e.type= object['type']
+                                    +e.number= object ['number']
+                    +e.info-item
+                        +e.worck-time-title_car
+                        each object in contacts.reachCar
+                            +e.reach-car= object['description']
+            +b.contacts-right-content
+                each object in contacts.phonesTitle
+                    +e.title= object['title']
+                +b.UL.phone-list
+                    each object in contacts.phoneList
+                        +e.LI.item
+                            +e.position= object['position']
+                            +e.full-name= object['fullName']
+                            +e.info(class= object['mod'])
+                                +e.A.phone(href=object['href'])= object['phone']
+                                +e.A.email(href=object['href2'])= object['email']

@@ -1,0 +1,57 @@
++b.SECTION.registration
+    .container.wrapper
+        +b.bread-crumbs
+            +e.A.link(href="/") Главная
+            +e.A.link Регистрация
+        .row-flex
+            +e.H1.title Регистрация
+            +b.FORM.form
+                +e.date
+                    +b.registration-type
+                        +b.arrow-down
+                        +e.LABEL.title Выберите регистрацию
+                        +e.item
+                            +e.SELECT.select(name="registration-type")
+                                +e.OPTION.option Для юридических лиц
+                                +e.OPTION.option Для юридических лиц
+                                +e.OPTION.option Для юридических лиц
+                                +e.OPTION.option Для юридических лиц
+                    +b.date-registration
+                        +e.title ДАННЫЕ РЕГИСТРАЦИИ
+                        +e.item
+                            +e.LABEL.label_email._required Ваш E-mail
+                            +e.INPUT.input_email(type="email" name="input-email" id="input-email")
+                        +e.item
+                            +e.LABEL.label_password._required Пароль
+                            +e.INPUT.input_password(type="password" name="input-password" id="input-password")
+                        +e.item
+                            +e.LABEL.label_confirm-password._required  Подтвердите пароль
+                            +e.INPUT.input_confirm-password(type="password" name="input-confirm-password" id="input-confirm-password")
+                    +b.date-company
+                        +e.title ДАННЫЕ ОБ ОРГАНИЗАЦИИ
+                        +e.item
+                            +e.LABEL.label_name._required Наименование организации
+                            +e.INPUT.input_name(type="text" name="input-company-name" id="input-company-name")
+                        +e.item
+                            +e.LABEL.label_contact-person._required ФИО контактного лица
+                            +e.INPUT.input_contact-person(type="text" name="input-contact-person" id="input-contact-person")
+                        +e.item
+                            +e.LABEL.label_inn._required ИНН
+                            +e.INPUT.input_inn(type="text" name="input-company-inn" id="input-company-inn")
+                        +e.item
+                            +e.LABEL.label_contact-phone Контактный телефон
+                            +e.INPUT.input_contact-phone(type="tel" name="input-contact-phone" id="input-contact-phone")
+                        +e.item
+                            +e.LABEL.label_director._required ФИО руководителя
+                            +e.INPUT.input_director(type="text" name="input-company-director" id="input-company-director")
+                +e.registration-options
+                    +b.recaptcha
+                        +e.IMG.img(src="assets/img/general/recaptcha.png")
+                    +b.BUTTON.button_red._large(type="submit" name="registration-submit" id="registration-submit") Завершить регистрацю »
+
+
+
+
+
+
+

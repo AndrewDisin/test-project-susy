@@ -1,0 +1,16 @@
++b.SECTION.about-company
+    .container.wrapper
+        +b.bread-crumbs
+            +e.A.link(href="/") Главная
+            +e.A.link О компани
+        .row-flex
+            each object in aboutCompany.about
+                +e.H1.title= object['title']
+                +e.description= object['description']
+                +e.picture
+                    +e.IMG.img(src=object["pictureSrc"] alt=object["pictureAlt"])
+                +e.history= object["history"]
+                +e.description= object['description2']
+                +e.description= object['description3']
+                +e.description= object['description4']
+

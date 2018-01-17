@@ -1,0 +1,60 @@
++b.SECTION.card
+    .container.wrapper
+        +b.bread-crumbs
+            +e.A.link(href="/") Главная
+            +e.A.link(href="catalog.html") Каталог
+            +e.A.link(href="catalog-level2.html") Товары для дома
+            +e.A.link(href="catalog-level3.html") Тонометры
+            +e.A.link Тонометры автоматические
+        each object in card.itemCard
+            +b.BUTTIN.button_blue._center._back= object['title']
+        +e.content.row-flex
+            +b.item-gallery
+                +b.big-pictures
+                    each object in card.bigPictures
+                        +e.item_best-price
+                            +e.IMG.img(src= object["src"])
+                +b.miniatures
+                    each object in card.miniatures
+                        +e.item
+                            +e.IMG.img(src= object['src'])
+            +b.item-info
+                each object in card.itemInfo
+                    +e.H1.title= object['title']
+                    +b.item-category
+                        +e.subcategory Подкатегория
+                        +e.type= object['type']
+                    +e.documents ДАННЫЙ ТОВАР ИМЕЕТ СЕРТИФИКАТ СООТВЕТСТВИЯ И РЕГИСТРАЦИОННОЕ УДОСТОВЕРЕНИЕ
+                    +b.item-price
+                        +e.old= object['old']
+                        +e.new= object['new']
+                    +b.button_goods-item._shot купить »
+            +b.item-decsription
+                each object in card.itemDescription
+                    +e.title= object['title']
+                    +e.description
+                        +e.text= object['text1']
+                        +e.text= object['text2']
+                        +e.text= object['text3']
+                        +e.text= object['text4']
+            +b.item-advantages
+                each object in card.itemAdvantages
+                    +e.title= object['title']
+                    +e.UL.list
+                        each object in card.advantagesList
+                            +e.LI.item= object['value']
+            +b.item-completeness
+                each object in card.itemCompleteness
+                    +e.title= object['title']
+                    +e.OL.list
+                        each object in card.completenessList
+                            +e.LI.item= object['value']
+            +b.additionally
+                each object in card.itemAdditionally
+                    +e.title= object['title']
+                +e.description Скачать документы для ознакомления:
+                +e.UL.files
+                    each object in card.additionallyList
+                        +e.LI.item
+                            +e.A.link(href= object['href'] download)= object['value']
+

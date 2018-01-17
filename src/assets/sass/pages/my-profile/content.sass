@@ -1,0 +1,92 @@
+.my-profile
+  @media screen and (max-width: $break_sm)
+    margin-bottom: 50px
+
+  margin-bottom: 100px
+  &__title
+    @include size(12)
+    color: $lowBlack
+    font-size: 36px
+    margin-bottom: 30px
+    text-align: left
+
+.form
+
+  &__options
+    @media screen and (max-width: $break_sm)
+      justify-content: center
+    display: flex
+    justify-content: flex-end
+    .button_large
+      border: none
+      border-radius: 5px
+
+  .user-data
+    @media screen and (max-width: $break_sm)
+      justify-content: center
+
+    @include size(12)
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    margin-bottom: 40px
+    .button_blue
+      @media screen and (max-width: $break_sm)
+        width: 100%
+
+      margin: 0
+      border: none
+      border-radius: 5px
+
+    &__avatar
+      @media screen and (max-width: $break_sm)
+        width: 100%
+        margin-right: 0
+        margin-bottom: 20px
+
+      width: 100%
+      max-width: 65px
+      margin-right: 20px
+
+    &__img
+      width: 100%
+      max-width: 65px
+
+    &__user-email
+      @media screen and (max-width: $break_sm)
+        width: 100%
+        text-align: center
+        margin-right: 0
+        margin-bottom: 20px
+
+      font-family: OpenSansSemiBold, sans-serif
+      font-size: 16px
+      color: $black
+      margin-right: 50px
+
+.logout
+  cursor: pointer
+
+  @media screen and (max-width: $break_sm)
+    right: 20px
+    top: 20px
+
+  position: absolute
+  right: 70px
+  top: 55px
+  font-family: OpenSansSemiBold, sans-serif
+  font-size: 14px
+  color: $lightBlue
+  &:before
+    content: ""
+    position: absolute
+    top: 50%
+    left: -5px
+    transform: translate(-100%, -50%)
+    color: $white
+    margin-right: 10px
+    width: 11px
+    height: 11px
+    background-image: url('../img/general/close-blue-button.png')
+    background-repeat: no-repeat
+    background-position: center center

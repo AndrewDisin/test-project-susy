@@ -1,0 +1,45 @@
++b.SECTION.catalog
+    +b.catalog-button
+        +e.IMG.img(src="")
+    .container.wrapper
+        +b.bread-crumbs
+            +e.A.link(href="/") Главная
+            +e.A.link(href="/") Каталог
+            +e.A.link Товары для дома
+        +e.H1.title_text-align-left Тонометры автоматические
+        +e.content_level3
+            +b.catalog-menu
+                +b.close-catalog-menu
+                +e.UL.list
+                    each object in catalog.catalogMenyLevel3List
+                        +e.LI.item
+                            +e.A(href= object['link']).item-link= object['title']
+            +b.right-content
+                +b.catalog-options
+                    each object in catalog.catalogOptions
+                        +e.show= object['show']
+                    +b.catalog-sorting
+                        +e.description Сортировать по:
+                        +e.criterion наименованию
+                        +b.UL.catalog-sorting-menu
+                            +e.LI.item
+                                +e.A.link(htef="/") популярности
+                            +e.LI.item
+                                +e.A.link(htef="/") алфавиту
+                            +e.LI.item
+                                +e.A.link(htef="/") новинки
+                            +e.LI.item
+                                +e.A.link(htef="/") лучшая цена
+                            +e.LI.item
+                                +e.A.link(htef="/") хит продаж
+        +b.catalog-list.row-flex
+            each object in catalog.catalogList
+                +b.ARTICLE.goods-item
+                    +e.FIGURE(class= object['mod'])
+                        +e.IMG.img(src= object['src'] alt= object['alt'])
+                        +e.FIGCAPTION.figcaption= object['figcaption']
+                    +e.A.title(href="card.html")= object['title']
+                    +e.description= object['description']
+                    +e.price
+                        +e.cost(class= object['sale'])= object['cost']
+                        +b.button_goods-item= object['btn']

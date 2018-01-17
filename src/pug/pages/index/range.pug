@@ -7,10 +7,11 @@
 					+b.ARTICLE.catalog-item
 						+e.IMG.img(src= object['src'] alt=object['alt'])
 						+e.info
-							+e.A.title(href="/")= object['title']
+							+e.A.title(href="catalog-level2.html")= object['title']
 							+e.UL.categories
 								each object1 in object.links
 									+b.LI.category-item
 										+e.A.link(href=object1['link'])=object1['title']
-			+b.A.button_blue(href="/")= object['btn']
+							+e.more Показать еще
+			+b.A.button_blue(href="catalog.html")= object['btn']
 			+e.descriptin= object['descriptin']

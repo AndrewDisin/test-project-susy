@@ -40,15 +40,15 @@
       "title": "Массажные столы Vernam",
       "links": {
         "item1": {
-          "link": "/",
+          "link": "catalog-level3.html",
           "title": "Складные массажные столы"
         },
         "item2": {
-          "link": "/",
+          "link": "catalog-level3.html",
           "title": "Аксессуары для массажа"
         },
         "item3": {
-          "link": "/",
+          "link": "catalog-level3.html",
           "title": "Стационарные массажные столы"
         }
       }
@@ -59,23 +59,23 @@
       "title": "Товары для дома",
       "links": {
         "item1": {
-          "link": "/",
+          "link": "catalog-level3.html",
           "title": "Мать и дитя"
         },
         "item2": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Тонометры"
         },
         "item3": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Ингаляторы"
         },
         "item4": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Коляски инвалидные"
         },
         "item5": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Физиотерапевтические аппараты"
         }
       }
@@ -86,23 +86,23 @@
       "title": "Для здоровья и красоты",
       "links": {
         "item1": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Аксессуары для массажа"
         },
         "item2": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Массаж"
         },
         "item3": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Разное"
         },
         "item4": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Фитнес"
         },
         "item5": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Тренажеры"
         }
       }
@@ -113,19 +113,19 @@
       "title": "Мебель медицинская",
       "links": {
         "item1": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Шкафы медицинские"
         },
         "item2": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Ширмы"
         },
         "item3": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Кушетки, банкетки"
         },
         "item4": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Штативы"
         }
       }
@@ -136,27 +136,27 @@
       "title": "Изделия медицинского назначения",
       "links": {
         "item1": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Марля, вата, бинты"
         },
         "item2": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Одноразовая одежда"
         },
         "item3": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Трубки, жгуты"
         },
         "item4": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Перчатки"
         },
         "item5": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Шприцы"
         },
         "item6": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Разное"
         }
       }
@@ -167,23 +167,23 @@
       "title": "Стерилизация, дезинфекция",
       "links": {
         "item1": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Емкости, лотки"
         },
         "item2": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Облучатели бактерицидные"
         },
         "item3": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Индикаторы, крафт-пакеты"
         },
         "item4": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Стерилизаторы, камеры"
         },
         "item5": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Коробки"
         }
       }
@@ -194,7 +194,7 @@
       "title": "Урология, гинекология",
       "links": {
         "item1": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Инструментарий"
         }
       }
@@ -205,23 +205,23 @@
       "title": "Хирургия",
       "links": {
         "item1": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Стулья и табуреты"
         },
         "item2": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Шкафы медицинские"
         },
         "item3": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Ширмы"
         },
         "item4": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Кушетки, банкетки"
         },
         "item5": {
-          "link": "/",
+          "link": "catalog-level2.html",
           "title": "Штативы"
         }
       }
@@ -229,15 +229,15 @@
   },
   "categories" : {
     "new": {
-      "link": "/",
+      "link": "catalog.html",
       "title": "Все новинки"
     },
     "hit": {
-      "link": "/",
+      "link": "catalog.html",
       "title": "Все хиты продаж"
     },
     "best": {
-      "link": "/",
+      "link": "catalog.html",
       "title": "Лучшая цена"
     }
   },

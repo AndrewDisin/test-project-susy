@@ -27,7 +27,7 @@
 	margin-bottom: 30px
 	display: flex
 	align-items: flex-start
-	justify-content: center
+	//justify-content: center
 
 	&__img
 		width: auto
@@ -47,9 +47,26 @@
 
 		&:hover
 			color: $red
+	&__info
+		display: flex
+		flex-wrap: wrap
+		align-items: flex-start
 
 	&__categories
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		justify-content: flex-start
+		position: relative
 		padding-left: 15px
+		&.open
+			.category-item:nth-child(n+5)
+				display: list-item
+	&__more
+		color: $darkBlue
+		cursor: pointer
+		border-bottom: 1px dashed $darkBlue
+		font-size: 14px
 
 
 .category-item
@@ -57,9 +74,9 @@
 	font-size: 17px
 	line-height: 24px
 	margin-bottom: 20px
-
+	&:nth-child(n+5)
+		display: none
 	&__link
-
 		&:hover
 			cursor: pointer
 			color: $darkBlue

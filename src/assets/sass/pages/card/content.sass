@@ -1,0 +1,228 @@
+.card
+  &__content
+    width: 100%
+  .row-flex
+    margin: 0
+
+
+.button
+  &_center
+    margin: 0 0 20px 0
+    min-width: 285px
+    text-align: left
+  &_back
+    position: relative
+    &:before
+      position: absolute
+      content: ''
+      width: 22px
+      height: 9px
+      top: 50%
+      left: 25px
+      transform: translateY(-50%)
+      background-image: url(../img/general/back-arrow.png)
+
+.item-gallery
+  @media screen and (max-width: $xl)
+    @include size(12)
+    margin-bottom: 20px
+
+
+  @include size(5)
+  margin-bottom: 30px
+
+.big-pictures
+  @media screen and (max-width: $xl)
+    margin: 0 auto
+    max-width: 100%
+
+  width: 100%
+  max-width: 480px
+
+  &__item
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 95px 65px 95px 65px
+    box-shadow: 2px 2px 9px 0px rgba(0, 0, 0, 0.09)
+    border: 1px solid rgba(0, 0, 0, 0.09)
+    &_best-price
+      position: relative
+      &:before
+        content: 'ЛУЧНАЯ ЦЕНА'
+        position: absolute
+        top: 90%
+        left: 0
+        -webkit-transform: translateY(-100%)
+        -ms-transform: translateY(-100%)
+        transform: translateY(-100%)
+        text-transform: uppercase
+        background-color: #f49639
+        padding: 8px
+        font-family: OpenSansSemiBold, sans-serif
+        color: #ffffff
+
+
+  &__img
+    margin: 0 auto
+    max-width: 100%
+
+.miniatures
+  @media screen and (max-width: $xl)
+    margin: 0 auto
+    max-width: 100%
+
+  width: 100%
+  max-width: 480px
+
+  &__img
+    max-width: 100%
+
+.item-info
+  @media screen and (max-width: $xl)
+    @include size(12)
+    margin-bottom: 20px
+
+
+  @include size(7)
+
+  &__title
+    color: $black
+    text-align: left
+    font-size: 36px
+    line-height: 46px
+    margin-bottom: 15px
+  &__documents
+    font-size: 16px
+    line-height: 24px
+    color: $black
+    text-transform: uppercase
+    font-family: OpenSansLight,sans-serif
+    margin-bottom: 55px
+
+.item-category
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: 20px
+  &__subcategory
+    font-size: 12px
+    color: $gray
+    margin-right: 10px
+  &__type
+    color: $blue
+    font-size: 12px
+
+.item-price
+  display: flex
+  align-items: flex-start
+  margin-bottom: 90px
+  &__old
+    font-family: OpenSansSemiBold, sans-serif
+    font-size: 18px
+    color: $orange
+    margin-right: 10px
+    text-decoration: line-through
+  &__new
+    font-family: OpenSansSemiBold, sans-serif
+    font-size: 36px
+    color: $black
+
+.button
+  &_shot
+    max-width: 170px
+    border-radius: 0
+    text-align: center
+
+.item-decsription
+  @include size(12)
+  padding: 30px 0
+  border-top: 1px solid $gray
+
+  &__title
+    font-size: 30px
+    color: $black
+    margin-bottom: 20px
+  &__description
+    font-size: 16px
+    line-height: 24px
+    color: $black
+  &__text
+    margin-bottom: 10px
+
+.item-advantages
+  @include size(12)
+
+  &__title
+    font-size: 30px
+    color: $black
+    margin-bottom: 20px
+
+  &__list
+    padding-left: 45px
+
+  &__item
+    position: relative
+    margin-bottom: 20px
+    font-size: 16px
+    color: $black
+    &:before
+      position: absolute
+      content: ">"
+      font-family: OpenSansSemiBold, sans-serif
+      color: $blue
+      font-size: 18px
+      left: -20px
+      top: 50%
+      transform: translateY(-50%)
+
+.item-completeness
+  @include size(12)
+
+  &__title
+    font-size: 30px
+    color: $black
+    margin-bottom: 20px
+
+  &__list
+    padding-left: 45px
+    list-style-type: none
+    counter-reset: num
+
+  &__item
+    position: relative
+    margin-bottom: 20px
+    font-size: 16px
+    color: $black
+    &:before
+      position: absolute
+      content: counter(num)"."
+      counter-increment: num
+      font-family: OpenSansSemiBold, sans-serif
+      color: $blue
+      font-size: 16px
+      left: -20px
+      top: 50%
+      transform: translateY(-50%)
+
+.additionally
+  @include size(12)
+  margin-bottom: 30px
+  &__title
+    font-size: 30px
+    color: $black
+    margin-bottom: 30px
+  &__description
+    font-size: 16px
+    color: $gray
+    margin-bottom: 20px
+  &__link
+    font-family: OpenSansSemiBold, sans-serif
+    color: $blue
+    font-size: 16px
+    line-height: 24px
+
+
+
+
+
